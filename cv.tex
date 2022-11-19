@@ -1,198 +1,365 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------
+% Resume in Latex
+% Author : DAIR Office
+% License : MIT
+%------------------------
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
+%---- Required Packages and Functions ----
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 \usepackage{tabularx}
-
-%for lists within experience section
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
+\usepackage{hyperref}
+\usepackage{fancyhdr}
 \usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
 
 %Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
 
 %for social icons
 \usepackage{fontawesome5}
 
-%debug page outer frames
-%\usepackage{showframe}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
-\begin{document}
-
-% non-numbered pages
-\pagestyle{empty} 
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
-\section{Work Experience}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] long long line of blah blah that will wrap when the table fills the column width
-        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-    \end{itemize}
-    \end{minipage}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
 }
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}, \hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Sarthak Mishra} % Your Name
+\newcommand{\course}{BS-MS in Physics} % Your Course
+% \newcommand{\roll}{18388} % Your Roll No.
+\newcommand{\phone}{7077965840} % Your Phone Number
+\newcommand{\emaila}{sarthakmishrachess@gmail.com} %Email 1
+\newcommand{\emailb}{sarthak18@iiserb.ac.in} %Email 2
+\newcommand{\github}{Nusart} %Github
+\newcommand{\twitter}{nusart829} %Twitter
+\newcommand{\linkedin}{nusart829} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge \textbf{\name} \\[7.5pt]
+\href{https://github.com/Nusart}{\raisebox{-0.05\height}\faGithub\ Nusart} \ $|$ \ 
+\href{https://linkedin.com/in/nusart829}{\raisebox{-0.05\height}\faLinkedin\ nusart829} \ $|$ \ 
+% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+\href{mailto:sarthakmishrachess@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ sarthakmishrachess@gmail.com} \ $|$ \ 
+\href{tel:+91-7077965840}{\raisebox{-0.05\height}\faMobile \ +91-7077965840} \\
 \end{tabularx}
 
-%Projects
-\section{Projects}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+%----------EDUCATION-----------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Science Education and Research Bhopal}{CGPA: 8.04/10}
+      {\small Integrated Bachelors of Science - Masters of Science}{2018 - 2023 (Expected)}
+      % \vspace{3mm} 
+      \hspace{1.5mm}{\small \textit{Major in Physics, Minor in Data Science and Engineering}}
+	    
+    \resumeSubheading
+      {Senior Secondary Education}{Percentage: 93\%}
+      {\small Class 12th (CBSE board)}{2015 - 2017}
+      % \vspace{3mm} 
+      \hspace{1.5mm}{\small \textit{Major subjects: Physics, Chemistry, Maths, Biology}}
+\resumeSubHeadingListEnd
+\vspace{-2mm}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ongoing Master's Thesis}{U. Porto, Portugal}
+      {Underwater Systems and Technology Laboratory, University of Porto, Portugal}{Aug 2022 - Apr 2023}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Trajectory optimization for Autonomous Underwater Vehicles using Model Predictive Control (MPC).}
+            \subitem {Development of an optimal trajectory of a 6DOF underwater vehicle interacting with time varying ocean flow fields with the use of a pre-defined cost function in MPC and then using a deep learning model to predict the best suitable cost function for the MPC.}
+      \resumeItemListEnd   
+      
+    \resumeSubheading
+    {Moon Lab}{IISER Bhopal}
+      {Summer Internship (collaboration with Underwater Systems and Technology Laboratory, U. Porto, Portugal)}{May - July 2022}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Autonaut speed prediction and trajectory optimization using wave data from forecast models.}
+            \subitem {Development of a machine learning model to predict the speed and trajectory of an Autonaut Unmanned Surface Vehicle with the help of datasets of the missions carried out in open oceans (Irish-Atlantic Region) and Fjords (near Norway).}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+      {Dr. Ritam Mallik, Dept. of Physics}{IISER Bhopal}
+      {Online Summer Internship}{May - July 2020}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Galaxy image classification using Regression and Ensemble models.}
+            \subitem {Image Analysis on Galaxy Images (GAMA catalogue) and classification using Local Weighted Regression and Ensemble Learning.}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+      {Coral Lab}{IIIT Delhi}
+      {Winter and Summer Internship}{Dec 2018, May - July 2019}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+        \item Obstacle avoidance using Turtlebot.
+        \subitem {Learning Robot Operating System (ROS) framework and applying obstacle avoidance algorithms on Turtlebot to navigate through a closed environment.}
+      \resumeItemListEnd      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Synthetic Satellite Image generation using Generative Adversarial Networks (GANs)}{}      {\textnormal{\href{https://github.com/Nusart/synthetic-satellite-imagery-GANs}{Github}}}{} %Website
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Image style transfer using GANs on multi-spectral images to generate and translate a masked layer to output high quality synthetic images.}
+        % \item {Project Work Done 2}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Drug Discovery on chEMBL dataset}{}      {\textnormal{\href{https://github.com/Nusart/drug-discovery-chembl}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Traditional Machine Learning based model to predict the concentration of a drug that is required for 50\% inhibition (IC50) in vitro for various drugs manually curated by chEMBL database to fight SARS CoV-2.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Question Answering from e-manual using word embeddings in Natural Language Processing}{}    {\textnormal{\href{https://github.com/Nusart/question-answering-NLP}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Finding the most relevant question text corpus of user query from e-manual faqs and thus finding their corresponding answers.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Multi-class music Genre classification using Machine Learning}
+      {}     {\textnormal{\href{https://github.com/Nusart/music-genre-classification}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Given a raw unprocessed dataset of multiple audio files, classify each file into respective music genres such as Jazz, Hip-hop, Disco, Blues, etc with the help of tuned ML models.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Monte Carlo Localization}
+      {}      {\textnormal{\href{https://github.com/Nusart/monte-carlo-localization}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Learning about simulataneous robot localization by implementation of the paper: {\textit{Monte Carlo Localization for Mobile Robots}}} by Frank Dellaert et. al.
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Spin to Spring mapping of a two-level Quantum System}
+      {}      {\textnormal{\href{https://github.com/Nusart/spin-to-spring-mapping-of-two-level-quantum-system}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Study of the behavior of the Spin Magnetization Vector through simulation of a nucleus subjected to a constant magnetic field on the application of Radio Frequency Pulse.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Web development}{}      {\textnormal{\href{https://github.com/Nusart/cicada-iiserb}{Github}}}{}
+      \vspace{-5.5mm}
+      \resumeItemListStart
+        \item {Cicada `2021, `2020}
+        \subitem {Created an online treasure hunt game inspired by the famous 'CICADA 3301' that requires extensive internet browsing and the use of browser developer tools to navigate through various pages on the internet.}
+        \item {Chrysalis Science Magazine}
+        \subitem {Created the e-blog for college science magazine.}
+        % {\href {https://students.iiserb.ac.in/chrysalis/}{Website}}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+\section{Technical Skills}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming/scripting languages} % Category
+    {Python*, C/C++, HTML, CSS, js, PHP, MySQL.}
+  \resumeSubItem{Tools/Frameworks/Simulators} % Category
+    {ROS, UUV Simulator*, Pandas*, Numpy, Matplotlib*, Keras, Tensorflow, Pytorch, Git, MATLAB, Wolfram Mathematica, Qutip.} % Skills
+  \resumeSubItem{Operating Systems}
+    {Windows, Linux*.} 
+ \resumeSubItem{Soft Skills} % Category
+    {English, Hindi, Odia, Sanskrit, Spanish.} \hfill \textit{\footnotesize{*Proficient}} 
+ \resumeHeadingSkillEnd
 
-\vfill
-\center{\footnotesize Last updated: \today}
 
+\section{Key courses taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Mathematics} % Category
+    {Linear Algebra, Multivariable Calculus, Probability \& Statistics.}
+\resumeSubItem{Physics} % Category
+    {Computational Physics, Numerical Methods and Programming,Physics through Computational Thinking.}
+\resumeSubItem{Computer Science} % Category
+    {Deep Learning*, Data science and Machine Learning, Artificial Intelligence, Advanced Programming in Python, Intelligent Robotics.}
+\resumeSubItem{e-Certificate courses} % Category
+    {Satellite Photogrammetry and its Application (Indian Institute of Remote Sensing, IIRS Dehradun), Computer Vision Basics using MATLAB (Coursera), MATLAB onramp (Mathworks).}
+\resumeHeadingSkillEnd
+\hfill \textit{\footnotesize{*To be completed by Dec. 2022}}
+
+
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Teaching Assistant} % Position
+    {Data Science in Practices, Dept. of Data Science and Engineering. \\
+    Conducted examinations, assignment preparation, answer sheet evaluation. \\ Managed over 120 students.} %Club,Event
+    {Aug - Nov 2022} %Tenure Period
+\resumePOR{Volunteer at NGO} % Position
+    {\href{https://www.facebook.com/Swadhin.SRR/}{Swadhin Educational and Charitable Trust}, Sambalpur, Odisha. \\
+    Organised multiple food and clothes distribution campaign for daily wage workers,\\
+    Sanitizers and masks distribution for needy ones during COVID-19.} %Club,Event
+    {2019 - present} %Tenure Period
+\resumePOR{Organising Committee} % Position
+    {\href {https://sites.google.com/iiserb.ac.in/nariphy/home}{Conference for National Assembly of Researchers in Physics}, \\(NARIPHY) IISER Bhopal.} %Club,Event
+    {Aug 2022} %Tenure Period
+\resumePOR{Technical Head cum Core Commitee} % Position
+    {Annual cultural fest, Enthuzia, IISER Bhopal.} %Club,Event
+    {2020 - 2021} %Tenure Period
+\resumePOR{Club Coordinator} % Position
+    {Chess Club, IISER Bhopal.} %Club,Event
+    {2020 - 2021} %Tenure Period
+\resumePOR{Editorial Board} % Position
+    {Chrysalis Science Magazine, IISER Bhopal.} %Club,Event
+    {2019 - 2020} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+
+\section{Achievements}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{Gold, Bronze Medals} % Award
+    {International Genetically Engineered Machine competition (iGEM).} % Event
+    {2020 - 2021} %Event Year
+
+\resumePOR{Gold Medal} % Award
+    {Inter-IISER Sports (Chess) Meet (IISM).} % Event
+    {2018} %Event Year
+
+\resumePOR{Gold, Silver, Bronze Medals} % Award
+    {All India Kendriya Vidyalaya National Sports (Chess) Meet.} % Event
+    {2010 - 2016} %Event Year
+
+\resumePOR{Participant} % Award
+    {National Junior Boys and Girls Chess Championship, Lucknow.} % Event
+    {2013} %Event Year
+
+\resumeSubHeadingListEnd
+% \vspace{-2mm}
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+%-------------------------------------------
 \end{document}
