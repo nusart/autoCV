@@ -87,7 +87,8 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
+% \vspace{0.5mm}
+\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
@@ -96,7 +97,8 @@
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
+\vspace{0.4mm}
+\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#3}} \\
         \footnotesize{\textit{#2}} & \footnotesize{#4}
@@ -163,7 +165,7 @@
 \setlength{\tabcolsep}{5pt} % Default value: 6pt
 \resumeSubHeadingListStart
     \resumeSubheading
-      {Indian Institute of Science Education and Research Bhopal}{CGPA: 8.19/10}
+      {Indian Institute of Science Education and Research Bhopal}{CPI: 8.19/10}
       {\small Integrated Bachelors of Science - Masters of Science}{2018 - 2023 (Expected)}
       % \vspace{3mm} 
       \hspace{1.5mm}{\small \textit{Major in \textbf{Physics}, Minor in \textbf{Data Science and Engineering}}}
@@ -174,7 +176,6 @@
       % \vspace{3mm} 
       \hspace{1.5mm}{\small \textit{Major subjects: Physics, Chemistry, Maths, Biology}}
 \resumeSubHeadingListEnd
-\vspace{-2mm}
 
 
 %-----------EXPERIENCE-----------------
@@ -198,14 +199,14 @@
             \subitem {Development of a machine learning model to predict the speed and trajectory of an Autonaut Unmanned Surface Vehicle with the help of datasets of the missions carried out in open oceans (Irish-Atlantic Region) and Fjords (near Norway).}
         \resumeItemListEnd
     
-    \resumeSubheading
-      {Dr. Ritam Mallik, Dept. of Physics}{IISER Bhopal}
-      {Online Summer Internship}{May - July 2020}
-      \vspace{-1mm}
-      \resumeItemListStart
-        \item {Galaxy image classification using Regression and Ensemble models.}
-            \subitem {Image Analysis on Galaxy Images (GAMA catalogue) and classification using Local Weighted Regression and Ensemble Learning.}
-        \resumeItemListEnd
+    % \resumeSubheading
+    %   {Dr. Ritam Mallik, Dept. of Physics}{IISER Bhopal}
+    %   {Online Summer Internship}{May - July 2020}
+    %   \vspace{-1mm}
+    %   \resumeItemListStart
+    %     \item {Galaxy image classification using Regression and Ensemble models.}
+    %         \subitem {Image Analysis on Galaxy Images (GAMA catalogue) and classification using Local Weighted Regression and Ensemble Learning.}
+    %     \resumeItemListEnd
     
     \resumeSubheading
       {Coral Lab}{IIIT Delhi}
@@ -216,21 +217,64 @@
         \subitem {Learning Robot Operating System (ROS) framework and applying obstacle avoidance algorithms on Turtlebot to navigate through a closed environment.}
       \resumeItemListEnd      
   \resumeSubHeadingListEnd
-\vspace{-5.5mm}
+
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+ \resumeSubHeadingListStart
+ \resumePOR{Sarthak Mishra} % Award
+    {Renato Mendes, Joao Sousa, Alberto Dallolio, Sujit P B, "Autonaut Speed Modelling for \\Real-time Motion Planning in Irish-Atlantic ocean", OCEANS 2023 conference, Limerick, Ireland, 2023.\\{\textit{(Accepted)}}} % Event
+    {} %Event Year 
+ \resumeSubHeadingListEnd
+
 
 %-----------SKILLS-----------------
 \section{Technical Skills}
  \resumeHeadingSkillStart
   \resumeSubItem{Programming/scripting languages} % Category
-    {Python*, C/C++, HTML, CSS, Javascript, PHP, MySQL.}
-  \resumeSubItem{Tools/Frameworks/Simulators} % Category
-    {ROS, UUV Simulator*, Pandas*, Numpy, Matplotlib*, Keras, Tensorflow, Pytorch, Git, MATLAB, Wolfram Mathematica, Qutip.} % Skills
+    {Python*, C/C++, \LaTeX, HTML, CSS, Javascript, PHP, MySQL.}
+  \resumeSubItem{Libraries/Frameworks/Simulators} % Category
+    {ROS/ROS, UUV Simulator*, Pandas*, Numpy, Matplotlib*, Keras, Tensorflow, Pytorch, Git, MATLAB, Wolfram Mathematica, Qutip.} % Skills
   \resumeSubItem{Operating Systems}
     {Windows, Linux*.} 
  \resumeSubItem{Soft Skills} % Category
     {English, Hindi, Odia, Sanskrit, Spanish.} \hfill \textit{\footnotesize{*Proficient}} 
  \resumeHeadingSkillEnd
- 
+
+\vspace{1em}
+%-----------CONFERENCES-----------------
+\section{Conferences, Symposiums and Workshops}    
+ \resumeSubHeadingListStart  
+    \resumePOR{Conference presentation} % Award
+    {Accepted for technical paper presentation on "Real-time Motion \\ Planning in Irish-Atlantic ocean" at OCEANS 2023 Limerick conference at University of \\ Limerick, Ireland.} % Event
+    {Jun 2023} %Event Year
+    
+    \resumePOR{CSE Research Symposium} % Award
+    {to learn about the cutting-edge research being done by Dept of \\ CSE in the field of computer systems, AI/ML, and theoretical CS at IIT Bombay.} % Event
+    {Mar 2023} %Event Year
+    
+    \resumePOR{Soft skills and Career Development workshop \href{https://drive.google.com/file/d/1QU1xaKHtkA27EPc2FdgE4_J931uG89aO/view?usp=sharing}{\footnotesize  \faIcon{link}}} % Award
+    {a 2.5 day intensive workshop on \\ behavioral skills and personality development organised by ICDPC, IISER Bhopal.} % Event
+    {Mar 2023} %Event Year
+    
+    \resumePOR{WSDM 2023} % Award
+    {Succesfully recieved the ACM SIGWEB Fair Access Student Participation Award \\ to participate in the \textbf{16th ACM International Conference on Web Search and Data Mining} \\ organised by National University of Singapore.} % Event
+    {Feb-Mar 2023} %Event Year
+    
+    \resumePOR{17th Academic Research and Careers for Students Symposium} % Award
+    {\textnormal{co-located with} \\ \textbf{ACM India Annual Event} organised by ACM India at OIST Bhopal.} % Event
+    {Feb 2023} %Event Year
+
+    % \resumePOR{\textnormal{Workshop on} Internet of Things (IoT) using Raspberry Pi \href{https://drive.google.com/file/d/129PuM3DhWDg-LBX_gbeQowdb0A1R9MFN/view?usp=sharing}{\footnotesize  \faIcon{link}}} % Award
+    % {organised by Technex’20 fest \\ IIT-BHU Varanasi.} % Event
+    % {Aug 2019} %Event Year
+
+    % \resumePOR{\textnormal{Workshop on} Science Writing \href{https://drive.google.com/file/d/1K6YHh-JJ27R-Fujma4Svp2wgDMyxi3H9/view?usp=sharing}{\footnotesize  \faIcon{link}}} % Award
+    % {a two day training on Science writing and blogging organised \\ by Science Media Center at IISER Pune.} % Event
+    % {May 2019} %Event Year
+ \resumeSubHeadingListEnd
+
+
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
@@ -250,7 +294,7 @@
         \item {Image style transfer using GANs on multi-spectral images to generate and translate a masked layer to output high quality synthetic images.}
         % \item {Project Work Done 2}
     \resumeItemListEnd
-    \newpage
+    % \newpage
     \resumeProject
       {Drug Discovery on chEMBL dataset}{}      {\textnormal{\href{https://github.com/Nusart/drug-discovery-chembl}{\faGithub}}}{}
       \vspace{-5.5mm}
@@ -258,13 +302,13 @@
         \item {Traditional Machine Learning based model to predict the concentration of a drug that is required for 50\% inhibition (IC50) in vitro for various drugs manually curated by chEMBL database to fight SARS CoV-2.}
     \resumeItemListEnd
 
-    \resumeProject
-      {Couzins Model}
-      {}     {\textnormal{\href{https://github.com/Nusart/Couzins-model}{\faGithub}}}{}
-      \vspace{-5.5mm}
-      \resumeItemListStart
-        \item {A simulation of the Couzins Model to study the collective animal behaviour.}
-    \resumeItemListEnd
+    % \resumeProject
+    %   {Couzins Model}
+    %   {}     {\textnormal{\href{https://github.com/Nusart/Couzins-model}{\faGithub}}}{}
+    %   \vspace{-5.5mm}
+    %   \resumeItemListStart
+    %     \item {A simulation of the Couzins Model to study the collective animal behaviour.}
+    % \resumeItemListEnd
     
     \resumeProject
       {Question Answering from e-manual using word embeddings in Natural Language Processing}{}    {\textnormal{\href{https://github.com/Nusart/question-answering-NLP}{\faGithub}}}{}
@@ -281,45 +325,41 @@
         \item {Given a raw unprocessed dataset of multiple audio files, classify each file into respective music genres such as Jazz, Hip-hop, Disco, Blues, etc with the help of tuned ML models.}
     \resumeItemListEnd
     
-    \resumeProject
-      {Spin to Spring mapping of a two-level Quantum System}
-      {}      {\textnormal{\href{https://github.com/Nusart/spin-to-spring-mapping-of-two-level-quantum-system}{\faGithub}}}{}
-      \vspace{-5.5mm}
-      \resumeItemListStart
-        \item {Study of the behavior of the Spin Magnetization Vector through simulation of a nucleus subjected to a constant magnetic field on the application of Radio Frequency Pulse.}
-    \resumeItemListEnd
+    % \resumeProject
+    %   {Spin to Spring mapping of a two-level Quantum System}
+    %   {}      {\textnormal{\href{https://github.com/Nusart/spin-to-spring-mapping-of-two-level-quantum-system}{\faGithub}}}{}
+    %   \vspace{-5.5mm}
+    %   \resumeItemListStart
+    %     \item {Study of the behavior of the Spin Magnetization Vector through simulation of a nucleus subjected to a constant magnetic field on the application of Radio Frequency Pulse.}
+    % \resumeItemListEnd
     
-    \resumeProject
-      {Web development}{}      {\textnormal{\href{https://github.com/Nusart/cicada}{\faGithub}}}{}
-      \vspace{-5.5mm}
-      \resumeItemListStart
-        \item {Cicada `21, `20}
-        \subitem {Creator of an online treasure hunt game inspired by the famous `CICADA 3301 Online Treasure' that requires extensive internet browsing and the use of browser developer tools to navigate through various pages on the internet.}
-        \item {Chrysalis Science Magazine}
-        \subitem {Owner and maintainer of e-blog for institute science magazine.}
-        % {\href {https://students.iiserb.ac.in/chrysalis/}{Website}}
-    \resumeItemListEnd
+    % \resumeProject
+    %   {Web development}{}      {\textnormal{\href{https://github.com/Nusart/cicada}{\faGithub}}}{}
+    %   \vspace{-5.5mm}
+    %   \resumeItemListStart
+    %     \item {Cicada `21, `20}
+    %     \subitem {Creator of an online treasure hunt game inspired by the famous `CICADA 3301 Online Treasure' that requires extensive internet browsing and the use of browser developer tools to navigate through various pages on the internet.}
+    %     \item {Chrysalis Science Magazine}
+    %     \subitem {Owner and maintainer of e-blog for institute science magazine.}
+    %     % {\href {https://students.iiserb.ac.in/chrysalis/}{Website}}
+    % \resumeItemListEnd
       
   \resumeSubHeadingListEnd
-\vspace{-5.5mm}
+
 
 %-----------COURSES-----------------
 \section{Key courses taken}
 \resumeHeadingSkillStart
-\resumeSubItem{Mathematics} % Category
-    {Linear Algebra, Multivariable Calculus, Probability \& Statistics.}
-\resumeSubItem{Physics} % Category
-    {Mathematical Methods, Computational Physics, Numerical Methods and Programming, Physics through Computational Thinking.}
-\resumeSubItem{Computer Science} % Category
-    {Deep Learning, Data science and Machine Learning, Artificial Intelligence, Advanced Programming in Python, AI and it's scientific application.}
+\resumeSubItem{Mathematics, Physics and Computer Science} % Category
+    {Linear Algebra, Multivariable Calculus, Probability \& Statistics, Mathematical Methods, Computational Physics, Numerical Methods and Programming, Physics through Computational Thinking, \textbf{Deep Learning}, \textbf{Data science and Machine Learning}, \textbf{Artificial Intelligence}, Advanced Programming in Python, AI and it's scientific application.}
 \resumeSubItem{e-Certificate courses} % Category
     {Satellite Photogrammetry and its Application (Indian Institute of Remote Sensing, IIRS Dehradun) \href{https://drive.google.com/file/d/1Va-hpY1TD7TdQ1_NzGwa9ggJ51vc5G4F/view?usp=share_link}{\footnotesize  \faIcon{link}}, Basics of Machine Learning (IISERB) \href{https://drive.google.com/file/d/1BFrfINnnO-heBwsiXnqa4u2_QSWYoIO0/view?usp=share_link}{\footnotesize  \faIcon{link}}, Computer Vision Basics using MATLAB (Coursera) \href{https://drive.google.com/file/d/1puteJJLp2zHHtByPVuY3wXHVIiDmp87M/view?usp=sharing}{\footnotesize \faIcon{link}}, MATLAB onramp (Mathworks) \href{https://drive.google.com/file/d/1-HQdhUhWTQ7qmyNNIMeb9y5ejI7DH3Uc/view?usp=share_link}{\footnotesize  \faIcon{link}}.}
 \resumeHeadingSkillEnd
 % \hfill \textit{\footnotesize{*To be completed by Dec. 2022}}
 
+\vspace{1em}
 %-----------RESPONSIBILITY-----------------
 \section{Positions of Responsibility}
-\vspace{-0.4mm}
 \resumeSubHeadingListStart
 \resumePOR{Teaching Assistant} % Position
     {Data Science in Practices, Dept. of Data Science and Engineering. \\
@@ -343,11 +383,10 @@
     {Chrysalis Science Magazine, IISER Bhopal.} %Club,Event
     {2019 - 2020} %Tenure Period
 \resumeSubHeadingListEnd
-\vspace{-4mm}
+
 
 %-----------ACHIEVEMENTS-----------------
 \section{Achievements}
-\vspace{-0.2mm}
 \resumeSubHeadingListStart
 \resumePOR{Gold Medal} % Award
     {Inter-IISER Sports Meet (IISM) - Football.} % Event
@@ -370,7 +409,7 @@
     {2013} %Event Year
 
 \resumeSubHeadingListEnd
-% \vspace{-2mm}
+
 \hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
 
 %-------------------------------------------
