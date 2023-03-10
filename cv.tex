@@ -115,7 +115,7 @@
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
 \newcommand{\cvsection}[1]{%
@@ -182,17 +182,18 @@
 \section{Research Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Ongoing Master's Thesis}{U. Porto, Portugal}
-      {Underwater Systems and Technology Laboratory, University of Porto, Portugal (with Moon Lab, IISERB)}{Aug 2022 - Apr 2023}
+      {Ongoing Master's Thesis}{University of Porto, Portugal}
+      {Underwater Systems and Technology Laboratory (LSTS) in collaboration with Moon Lab}{Aug 2022 - Apr 2023}
       \vspace{-1mm}
       \resumeItemListStart
-        \item {Trajectory optimization for Autonomous Underwater Vehicles using Model Predictive Control (MPC).}
+        \item {Trajectory optimization for a 6 Degree of Freedom (DOF) Autonomous Underwater Vehicle (AUV) using Model Predictive Control (MPC).}
             \subitem {Development of an optimal trajectory of a 6DOF underwater vehicle interacting with time varying ocean flow fields with the use of a pre-defined cost function in MPC and then using a deep learning model to predict the best suitable cost function for the MPC.}
+            \textnormal{\href{https://github.com/Nusart/ms-thesis/blob/main/18388_Sarthak_report.pdf}{[Synopsis]}}
       \resumeItemListEnd   
       
     \resumeSubheading
     {Moon Lab}{IISER Bhopal}
-      {Summer Internship (collaboration with Underwater Systems and Technology Laboratory, U. Porto, Portugal)}{May - July 2022}
+      {Summer Internship (collaboration with LSTS Porto)}{May - July 2022}
       \vspace{-1mm}
       \resumeItemListStart
         \item {Autonaut speed prediction and trajectory optimization using wave data from forecast models.}
@@ -234,32 +235,33 @@
   \resumeSubItem{Programming/scripting languages} % Category
     {Python*, C/C++, \LaTeX, HTML, CSS, Javascript, PHP, MySQL.}
   \resumeSubItem{Libraries/Frameworks/Simulators} % Category
-    {ROS/ROS2, Gazebo, UUV Simulator* \href{https://uuvsimulator.github.io/}{\footnotesize  \faIcon{link}}, Pandas*, Numpy, Matplotlib*, Keras, Tensorflow, Pytorch, Git, MATLAB, Wolfram Mathematica, Qutip.} % Skills
+    {ROS/ROS2, Gazebo,  \href{https://uuvsimulator.github.io/}{UUV Simulator}*,
+    Pandas*, Numpy, Matplotlib*, Keras, Tensorflow, Pytorch, Git, MATLAB, Wolfram Mathematica, Qutip.} % Skills
   \resumeSubItem{Operating Systems}
     {Windows, Linux*.} 
  \resumeSubItem{Soft Skills} % Category
     {English, Hindi, Odia, Sanskrit, Spanish.} \hfill \textit{\footnotesize{*Proficient}} 
  \resumeHeadingSkillEnd
 
-\vspace{1em}
+% \vspace{1em}
 %-----------CONFERENCES-----------------
 \section{Conferences, Symposiums and Workshops}    
  \resumeSubHeadingListStart  
     \resumePOR{Conference presentation} % Award
-    {Accepted for technical paper presentation on "Real-time Motion \\ Planning in Irish-Atlantic ocean" at OCEANS 2023 Limerick conference at University of \\ Limerick, Ireland.} % Event
+    {Accepted for technical paper presentation on "Real-time Motion \\ Planning in Irish-Atlantic ocean" at \textbf{OCEANS 2023 conference} at University of \\ Limerick, Ireland.} % Event
     {Jun 2023} %Event Year
     
-    \resumePOR{CSE Research Symposium} % Award
-    {to learn about the cutting-edge research being done by Dept of \\ CSE in the field of computer systems, AI/ML, and theoretical CS at IIT Bombay.} % Event
+    \resumePOR{IITB CSE Research Symposium} % Award
+    {Selected to attend this 2 day symposium to showcase the \\cutting-edge research in the field of \textbf{AI/ML}, computer systems, and theoretical CS.} % Event
     {Mar 2023} %Event Year
     
-    \resumePOR{Soft skills and Career Development workshop \href{https://drive.google.com/file/d/1QU1xaKHtkA27EPc2FdgE4_J931uG89aO/view?usp=sharing}{\footnotesize  \faIcon{link}}} % Award
+    \resumePOR{Soft skills and Career Development workshop \href{https://drive.google.com/file/d/1QU1xaKHtkA27EPc2FdgE4_J931uG89aO/view?usp=sharing}{\footnotesize \faIcon{link}}} % Award
     {a 2.5 day intensive workshop on \\ behavioral skills and personality development organised by ICDPC, IISER Bhopal.} % Event
     {Mar 2023} %Event Year
     
     \resumePOR{WSDM 2023} % Award
-    {Recieved the ACM SIGWEB Fair Access Student Participation Award for virtual \\ participation in the \textbf{16th ACM International Conference on Web Search and Data Mining} \\ organised by National University of Singapore.} % Event
-    {Feb-Mar 2023} %Event Year
+    {Recieved the \textbf{ACM SIGWEB Fair Access Student Participation Award} for \\ participation in the \textbf{16th ACM International Conference on Web Search and Data Mining} \\ organised by National University of Singapore.} % Event
+    {Feb - Mar 2023} %Event Year
     
     \resumePOR{17th Academic Research and Careers for Students Symposium} % Award
     {\textnormal{co-located with} \\ \textbf{ACM India Annual Event} organised by ACM India at OIST Bhopal.} % Event
@@ -281,14 +283,14 @@
 
     \resumeProject
       {Monte carlo localization simulation of Mobile Robots}
-      {}     {\textnormal{\href{https://github.com/Nusart/monte-carlo-localization}{\faGithub}}}{}
+      {}     {\textnormal{\href{https://github.com/Nusart/monte-carlo-localization}{\Large \faGithub}}}{}
       \vspace{-5.5mm}
       \resumeItemListStart
         \item {Learning about Monte Carlo Localization algorithm through the paper- Monte Carlo localization of Mobile Robots by Frank Dellaert et. al. by creating simulations based on the paper.}
     \resumeItemListEnd
 
     \resumeProject
-      {Synthetic Satellite Image generation using Generative Adversarial Networks (GANs)}{}      {\textnormal{\href{https://github.com/Nusart/synthetic-satellite-imagery-GANs}{\faGithub}}}{} %Website
+      {Synthetic Satellite Image generation using Generative Adversarial Networks (GANs)}{}      {\textnormal{\href{https://github.com/Nusart/synthetic-satellite-imagery-GANs}{\Large \faGithub}}}{} %Website
       \vspace{-5.5mm}
       \resumeItemListStart
         \item {Image style transfer using GANs on multi-spectral images to generate and translate a masked layer to output high quality synthetic images.}
@@ -296,7 +298,7 @@
     \resumeItemListEnd
     % \newpage
     \resumeProject
-      {Drug Discovery on chEMBL dataset}{}      {\textnormal{\href{https://github.com/Nusart/drug-discovery-chembl}{\faGithub}}}{}
+      {Drug Discovery on chEMBL dataset}{}      {\textnormal{\href{https://github.com/Nusart/drug-discovery-chembl}{\Large \faGithub}}}{}
       \vspace{-5.5mm}
       \resumeItemListStart
         \item {Traditional Machine Learning based model to predict the concentration of a drug that is required for 50\% inhibition (IC50) in vitro for various drugs manually curated by chEMBL database to fight SARS CoV-2.}
@@ -304,14 +306,14 @@
 
     % \resumeProject
     %   {Couzins Model}
-    %   {}     {\textnormal{\href{https://github.com/Nusart/Couzins-model}{\faGithub}}}{}
+    %   {}     {\textnormal{\href{https://github.com/Nusart/Couzins-model}{\large \faGithub}}}{}
     %   \vspace{-5.5mm}
     %   \resumeItemListStart
     %     \item {A simulation of the Couzins Model to study the collective animal behaviour.}
     % \resumeItemListEnd
     
     \resumeProject
-      {Question Answering from e-manual using word embeddings in Natural Language Processing}{}    {\textnormal{\href{https://github.com/Nusart/question-answering-NLP}{\faGithub}}}{}
+      {Question Answering from e-manual using word embeddings in Natural Language Processing}{}    {\textnormal{\href{https://github.com/Nusart/question-answering-NLP}{\Large \faGithub}}}{}
       \vspace{-5.5mm}
       \resumeItemListStart
         \item {Finding the most relevant question text corpus of user query from e-manual faqs and thus finding their corresponding answers.}
@@ -319,7 +321,7 @@
     
     \resumeProject
       {Multi-class music Genre classification using Machine Learning}
-      {}     {\textnormal{\href{https://github.com/Nusart/music-genre-classification}{\faGithub}}}{}
+      {}     {\textnormal{\href{https://github.com/Nusart/music-genre-classification}{\Large \faGithub}}}{}
       \vspace{-5.5mm}
       \resumeItemListStart
         \item {Given a raw unprocessed dataset of multiple audio files, classify each file into respective music genres such as Jazz, Hip-hop, Disco, Blues, etc with the help of tuned ML models.}
@@ -327,14 +329,14 @@
     
     % \resumeProject
     %   {Spin to Spring mapping of a two-level Quantum System}
-    %   {}      {\textnormal{\href{https://github.com/Nusart/spin-to-spring-mapping-of-two-level-quantum-system}{\faGithub}}}{}
+    %   {}      {\textnormal{\href{https://github.com/Nusart/spin-to-spring-mapping-of-two-level-quantum-system}{\large \faGithub}}}{}
     %   \vspace{-5.5mm}
     %   \resumeItemListStart
     %     \item {Study of the behavior of the Spin Magnetization Vector through simulation of a nucleus subjected to a constant magnetic field on the application of Radio Frequency Pulse.}
     % \resumeItemListEnd
     
     % \resumeProject
-    %   {Web development}{}      {\textnormal{\href{https://github.com/Nusart/cicada}{\faGithub}}}{}
+    %   {Web development}{}      {\textnormal{\href{https://github.com/Nusart/cicada}{\large \faGithub}}}{}
     %   \vspace{-5.5mm}
     %   \resumeItemListStart
     %     \item {Cicada `21, `20}
@@ -357,21 +359,21 @@
 \resumeHeadingSkillEnd
 % \hfill \textit{\footnotesize{*To be completed by Dec. 2022}}
 
-\vspace{1em}
+% \vspace{1em}
 %-----------RESPONSIBILITY-----------------
 \section{Positions of Responsibility}
 \resumeSubHeadingListStart
 \resumePOR{Teaching Assistant} % Position
-    {Data Science in Practices, Dept. of Data Science and Engineering. \\
-    Conducted examinations, assignment preparation, answer sheet evaluation. \\ Managed over 120 students.} %Club,Event
+    {for the course \textbf{Data Science in Practices}, Dept. of Data Science and \\Engineering.
+    Examination conduction, assignment preparation, answer sheet evaluation \\for a class of 120 students.} %Club,Event
     {Aug - Nov 2022} %Tenure Period
 \resumePOR{Volunteer at NGO} % Position
-    {Swadhin Educational and Charitable Trust, Sambalpur, Odisha. \\
+    {\textbf{Swadhin Educational and Charitable Trust}, Sambalpur, Odisha. \\
     Organised multiple food and clothes distribution campaign for daily wage workers,\\
     Sanitizers and masks distribution for needy ones during COVID-19.} %Club,Event
     {2019 - 2021} %Tenure Period
 \resumePOR{Organising Committee} % Position
-    {Conference for National Assembly of Researchers in Physics \\(NARIPHY), IISER Bhopal.} %Club,Event
+    {Conference for \textbf{National Assembly of Researchers in Physics} \\(NARIPHY), IISER Bhopal.} %Club,Event
     {Aug 2022} %Tenure Period
 \resumePOR{Technical Head cum Core Commitee} % Position
     {Annual cultural fest, Enthuzia, IISER Bhopal.} %Club,Event
@@ -385,6 +387,7 @@
 \resumeSubHeadingListEnd
 
 
+\vspace{1 mm}
 %-----------ACHIEVEMENTS-----------------
 \section{Achievements}
 \resumeSubHeadingListStart
